@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart Analysis - Trading Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav id="navbar" class="navibar">
+        <a href="index.html">Home</a>
+        <a href="index.html#Trading">Trading & Analysis</a>
+        <a href="index.html#Projects">Projects</a>
+    </nav>
+    <section class="about-section project-detail-section">
+        <h2>Chart Analysis</h2>
+        
+        <div class="project-slider-detail">
+            <button class="slider-btn prev" onclick="slideDetailImages(-1)">&#10094;</button>
+            <div class="slider-images">
+                <img src="img/trading/chart-analysis.svg" alt="BTC/USDT Analysis" class="detail-img active" />
+                <!-- Tambahkan gambar-gambar analisis chart lainnya di sini -->
+            </div>
+            <button class="slider-btn next" onclick="slideDetailImages(1)">&#10095;</button>
+        </div>
+        
+        <h3>BTC/USDT Weekly Analysis - Oktober 2025</h3>
+        <p>Analisis teknikal pada chart BTC/USDT menunjukkan beberapa sinyal penting yang perlu diperhatikan trader dan investor. Chart ini menampilkan pola pergerakan harga Bitcoin dalam beberapa minggu terakhir dengan identifikasi level support dan resistance kunci.</p>
+        
+        <div class="analysis-details">
+            <h4>Key Observations</h4>
+            <ul>
+                <li><strong>Support Level:</strong> $69,000 - Level ini telah diuji dua kali dan berhasil menahan penurunan harga</li>
+                <li><strong>Resistance Level:</strong> $78,500 - Level psikologis yang perlu ditembus untuk konfirmasi lanjutan uptrend</li>
+                <li><strong>Indikator Teknikal:</strong> RSI pada level 58 (netral dengan bias bullish)</li>
+                <li><strong>Volume:</strong> Peningkatan volume pada setiap bouncing dari level support</li>
+            </ul>
+            
+            <h4>Market Analysis</h4>
+            <p>Berdasarkan pola chart dan indikator teknikal, Bitcoin menunjukkan sinyal bullish untuk jangka menengah. Namun, trader perlu berhati-hati dengan volatilitas jangka pendek yang bisa terjadi, terutama pada level resistance kunci. Target harga potensial jika resistance berhasil ditembus adalah $85,000 - $88,000 dalam 3-4 minggu ke depan.</p>
+            
+            <h4>Trading Considerations</h4>
+            <p>Pergerakan di atas resistance $78,500 dengan volume tinggi dapat menjadi sinyal entry yang kuat, dengan stop loss di bawah support $69,000 untuk manajemen risiko yang tepat. Rasio risk/reward potensial adalah sekitar 1:2 untuk target pertama di $85,000.</p>
+        </div>
+        
+        <p class="disclaimer">Disclaimer: Analisis ini disediakan untuk tujuan edukasi dan bukan merupakan rekomendasi investasi atau sinyal trading. Selalu lakukan analisis dan penelitian Anda sendiri sebelum mengambil keputusan trading.</p>
+        
+        <a href="index.html#Trading" class="btn">&#8592; Kembali ke Trading & Analysis</a>
+        
+        <div class="social-share">
+            <h4>Share Analysis:</h4>
+            <a href="#" class="social-icon" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="social-icon" target="_blank" rel="noopener"><i class="fa fa-linkedin"></i></a>
+            <a href="#" class="social-icon" target="_blank" rel="noopener"><i class="fa fa-telegram"></i></a>
+        </div>
+    </section>
+    
+    <script>
+    let currentDetail = 0;
+    function slideDetailImages(dir) {
+        const imgs = document.querySelectorAll('.detail-img');
+        imgs[currentDetail].classList.remove('active');
+        currentDetail += dir;
+        if (currentDetail < 0) currentDetail = imgs.length - 1;
+        if (currentDetail >= imgs.length) currentDetail = 0;
+        imgs[currentDetail].classList.add('active');
+    }
+    </script>
+</body>
+</html>

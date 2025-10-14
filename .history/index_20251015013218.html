@@ -72,32 +72,6 @@
         </div>
     </section>
 
-    <!-- Trading & Analysis Section -->
-    <section id="Trading" class="projects-section">
-        <h2 style="text-align:center;">Trading & Analysis</h2>
-        <div class="projects-slider">
-            <div class="projects-grid slide-active" id="trading-slider">
-                <div class="project-card trading-card" onclick="window.location.href='trading-analysis.html'" style="cursor:pointer">
-                    <img src="img/trading/chart-analysis.svg" alt="Chart Analysis" class="trading-img" />
-                    <h3>Chart Analysis</h3>
-                    <p>Analisis teknikal pada grafik BTC/USDT dengan identifikasi level support dan resistance serta tren pergerakan pasar.</p>
-                </div>
-                <div class="project-card trading-card" onclick="window.location.href='trading-journal.html'" style="cursor:pointer">
-                    <img src="img/trading/trading-journal.svg" alt="Trading Journal" class="trading-img" />
-                    <h3>Trading Journal</h3>
-                    <p>Dokumentasi rencana trading dengan strategi entry, target profit, stop loss, dan analisis risk/reward ratio yang jelas.</p>
-                </div>
-                <div class="project-card trading-card" onclick="window.location.href='market-insights.html'" style="cursor:pointer">
-                    <img src="img/trading/market-article.svg" alt="Market Insights" class="trading-img" />
-                    <h3>Market Insights</h3>
-                    <p>Artikel dan catatan mengenai tren pasar kripto, termasuk analisis fundamental dan sentimen pasar terkini.</p>
-                </div>
-            </div>
-            <button class="slider-btn prev" onclick="slideTradingContent(-1)">&#10094;</button>
-            <button class="slider-btn next" onclick="slideTradingContent(1)">&#10095;</button>
-        </div>
-    </section>
-
     <!-- Certificate Section -->
     <section id="Certificates" class="projects-section">
         <h2 style="text-align:center;">Sertifikat</h2>
@@ -173,19 +147,6 @@
         if (currentCertificate > maxSlide - 1) currentCertificate = maxSlide - 1;
         const cardWidth = cards[0].offsetWidth + 32;
         grid.style.transform = `translateX(${-currentCertificate * cardWidth}px)`;
-    }
-    
-    // Trading content slider logic
-    let currentTradingContent = 0;
-    function slideTradingContent(direction) {
-        const grid = document.getElementById('trading-slider');
-        const cards = grid.querySelectorAll('.trading-card');
-        const maxSlide = cards.length - 1;
-        currentTradingContent += direction;
-        if (currentTradingContent < 0) currentTradingContent = 0;
-        if (currentTradingContent > maxSlide - 1) currentTradingContent = maxSlide - 1;
-        const cardWidth = cards[0].offsetWidth + 32;
-        grid.style.transform = `translateX(${-currentTradingContent * cardWidth}px)`;
     }
 
     // Navbar smooth scroll & click effect

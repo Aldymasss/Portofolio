@@ -174,19 +174,6 @@
         const cardWidth = cards[0].offsetWidth + 32;
         grid.style.transform = `translateX(${-currentCertificate * cardWidth}px)`;
     }
-    
-    // Trading content slider logic
-    let currentTradingContent = 0;
-    function slideTradingContent(direction) {
-        const grid = document.getElementById('trading-slider');
-        const cards = grid.querySelectorAll('.trading-card');
-        const maxSlide = cards.length - 1;
-        currentTradingContent += direction;
-        if (currentTradingContent < 0) currentTradingContent = 0;
-        if (currentTradingContent > maxSlide - 1) currentTradingContent = maxSlide - 1;
-        const cardWidth = cards[0].offsetWidth + 32;
-        grid.style.transform = `translateX(${-currentTradingContent * cardWidth}px)`;
-    }
 
     // Navbar smooth scroll & click effect
     document.querySelectorAll('.nav-list a[href^="#"]').forEach(link => {

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Insights - Trading Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav id="navbar" class="navibar">
+        <a href="index.html">Home</a>
+        <a href="index.html#Trading">Trading & Analysis</a>
+        <a href="index.html#Projects">Projects</a>
+    </nav>
+    <section class="about-section project-detail-section">
+        <h2>Market Insights</h2>
+        
+        <div class="project-slider-detail">
+            <button class="slider-btn prev" onclick="slideDetailImages(-1)">&#10094;</button>
+            <div class="slider-images">
+                <img src="img/trading/market-article.svg" alt="Bitcoin Q4 Analysis" class="detail-img active" />
+                <!-- Tambahkan gambar-gambar artikel market lainnya di sini -->
+            </div>
+            <button class="slider-btn next" onclick="slideDetailImages(1)">&#10095;</button>
+        </div>
+        
+        <article class="market-article">
+            <h3>Kenapa Bitcoin Cenderung Bullish di Q4?</h3>
+            <p class="article-meta">Oktober 15, 2025 | Market Analysis</p>
+            
+            <p>Secara historis, kuartal keempat (Q4) sering menjadi periode yang menguntungkan bagi Bitcoin. Artikel ini menganalisis beberapa faktor kunci yang berkontribusi pada tren ini dan apa yang dapat kita harapkan untuk Q4 tahun 2025.</p>
+            
+            <h4>Analisis Historis</h4>
+            <p>Dalam 7 dari 10 tahun terakhir, Bitcoin telah menunjukkan performa positif di Q4 dengan rata-rata pengembalian lebih dari 30%. Tahun 2024 juga menunjukkan pola serupa dengan kenaikan 25% selama periode Oktober-Desember.</p>
+            
+            <h4>Faktor Kunci</h4>
+            <ul>
+                <li><strong>Efek Musiman:</strong> Bitcoin telah menunjukkan pola musiman yang relatif konsisten, dengan akumulasi di Q4 dan distribusi di Q1-Q2 tahun berikutnya.</li>
+                <li><strong>Likuiditas Pasar:</strong> Institusi keuangan sering mengalokasikan dana baru di akhir tahun, sebagian dialirkan ke aset kripto sebagai bagian dari diversifikasi portofolio.</li>
+                <li><strong>Sentimen Ritel:</strong> Investor retail cenderung meningkat aktivitasnya menjelang akhir tahun, didorong oleh sentimen "FOMO" dan harapan bull run.</li>
+                <li><strong>Faktor Fundamental:</strong> Upgrade protokol dan perkembangan ekosistem yang sering dijadwalkan pada Q4 untuk mempersiapkan ekspansi tahun berikutnya.</li>
+            </ul>
+            
+            <h4>On-chain Metrics</h4>
+            <p>Data on-chain menunjukkan akumulasi yang signifikan oleh wallet berukuran besar (whale) dalam 30 hari terakhir. Exchange outflows meningkat 15% dibanding bulan sebelumnya, mengindikasikan aktivitas hodling yang lebih tinggi.</p>
+            
+            <h4>Outlook Q4 2025</h4>
+            <p>Dengan fundamental yang kuat dan perkembangan ekosistem yang terus berlanjut, Q4 2025 memiliki potensi untuk mengulang pola historis. Namun, investor harus tetap waspada terhadap faktor makro ekonomi seperti kebijakan bank sentral dan regulasi yang dapat memengaruhi pergerakan pasar.</p>
+            
+            <p>Faktor yang perlu diperhatikan dalam beberapa minggu ke depan adalah volume perdagangan, sentimen pasar global, dan aliran dana institusional yang dapat menjadi indikator awal untuk performa Bitcoin di sisa Q4 2025.</p>
+        </article>
+        
+        <p class="disclaimer">Disclaimer: Artikel ini disediakan untuk tujuan edukasi dan informasi semata. Ini bukanlah saran finansial atau rekomendasi investasi.</p>
+        
+        <a href="index.html#Trading" class="btn">&#8592; Kembali ke Trading & Analysis</a>
+        
+        <div class="market-resources">
+            <h4>Market Resources:</h4>
+            <a href="https://glassnode.com/" target="_blank" rel="noopener" class="btn btn-link">Glassnode</a>
+            <a href="https://messari.io/" target="_blank" rel="noopener" class="btn btn-link">Messari</a>
+        </div>
+    </section>
+    
+    <script>
+    let currentDetail = 0;
+    function slideDetailImages(dir) {
+        const imgs = document.querySelectorAll('.detail-img');
+        imgs[currentDetail].classList.remove('active');
+        currentDetail += dir;
+        if (currentDetail < 0) currentDetail = imgs.length - 1;
+        if (currentDetail >= imgs.length) currentDetail = 0;
+        imgs[currentDetail].classList.add('active');
+    }
+    </script>
+</body>
+</html>

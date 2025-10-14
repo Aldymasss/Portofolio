@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#1E2232"/>
+  
+  <!-- Chart Pattern -->
+  <polyline points="50,300 100,280 150,310 200,250 250,275 300,200 350,220 400,180 450,150 500,170 550,120" 
+           stroke="#00C853" stroke-width="3" fill="none"/>
+           
+  <!-- Candlestick Examples -->
+  <rect x="100" y="280" width="10" height="30" fill="#FF3D00"/>
+  <line x1="105" y1="270" x2="105" y2="280" stroke="#FF3D00" stroke-width="2"/>
+  <line x1="105" y1="310" x2="105" y2="320" stroke="#FF3D00" stroke-width="2"/>
+  
+  <rect x="200" y="230" width="10" height="20" fill="#00C853"/>
+  <line x1="205" y1="220" x2="205" y2="230" stroke="#00C853" stroke-width="2"/>
+  <line x1="205" y1="250" x2="205" y2="260" stroke="#00C853" stroke-width="2"/>
+  
+  <rect x="300" y="200" width="10" height="25" fill="#00C853"/>
+  <line x1="305" y1="190" x2="305" y2="200" stroke="#00C853" stroke-width="2"/>
+  <line x1="305" y1="225" x2="305" y2="235" stroke="#00C853" stroke-width="2"/>
+  
+  <rect x="400" y="160" width="10" height="20" fill="#00C853"/>
+  <line x1="405" y1="150" x2="405" y2="160" stroke="#00C853" stroke-width="2"/>
+  <line x1="405" y1="180" x2="405" y2="190" stroke="#00C853" stroke-width="2"/>
+  
+  <!-- Support/Resistance Line -->
+  <line x1="50" y1="250" x2="550" y2="250" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="50" y1="175" x2="550" y2="175" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="5,5"/>
+  
+  <!-- Annotations -->
+  <text x="500" y="150" font-family="Arial" font-size="14" fill="#FFFFFF">Resistance</text>
+  <text x="500" y="270" font-family="Arial" font-size="14" fill="#FFFFFF">Support</text>
+  <text x="150" y="350" font-family="Arial" font-size="18" fill="#FFFFFF">BTC/USDT Daily Chart Analysis</text>
+</svg>
