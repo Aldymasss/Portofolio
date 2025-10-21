@@ -173,7 +173,7 @@
     function slideCertificates(direction) {
         const grid = document.getElementById('certificate-slider');
         const cards = grid.querySelectorAll('.certificate-card');
-        const maxSlide = cards.length;
+        const maxSlide = cards.length - 1;
         currentCertificate += direction;
         if (currentCertificate < 0) currentCertificate = 0;
         if (currentCertificate > maxSlide - 1) currentCertificate = maxSlide - 1;
